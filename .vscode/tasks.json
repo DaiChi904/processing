@@ -6,7 +6,7 @@
     },
     "tasks": [
       {
-        "label": "Run",
+        "label": "Run:Processing",
         "command": "C:\\Program Files\\processing-4.3.4\\processing-java.exe",
         "type": "process",
         "args": ["--force", "--sketch=${fileDirname}", "--run"],
