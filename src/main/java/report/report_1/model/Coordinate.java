@@ -1,4 +1,4 @@
-package report.report_1.utils;
+package report.report_1.model;
 
 public class Coordinate {
   public float x, y;

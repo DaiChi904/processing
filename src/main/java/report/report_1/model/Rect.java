@@ -1,4 +1,4 @@
-package report.report_1.utils;
+package report.report_1.model;
 
 public class Rect {
   public Coordinate p1, p2, p3, p4;

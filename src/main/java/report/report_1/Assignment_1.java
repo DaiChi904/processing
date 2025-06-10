@@ -1,10 +1,9 @@
 package report.report_1;
 
 import processing.core.*;
-import report.report_1.utils.Coordinate;
-import report.report_1.utils.Rect;
+import report.report_1.model.Coordinate;
+import report.report_1.model.Rect;
 
-// *Coution utilsの責務はデータ構造定義する事であり、描画の責務は負わない
 public class Assignment_1 extends PApplet {
   TransformClient transformClient = new TransformClient();
 
