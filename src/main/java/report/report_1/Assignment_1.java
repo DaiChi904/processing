@@ -21,23 +21,31 @@ public class Assignment_1 extends PApplet {
   }
 
   public void draw() {
+    // Support line for better visuallity.
+    drawLine(new Coordinate(0, 0), new Coordinate(500f, 500f * 0.3f));
+
+    // Original rect.
     Rect initialRect = new Rect(new Coordinate(100, 30), new Coordinate(200, 30), new Coordinate(200, 60),
         new Coordinate(100, 60));
     fill(0);
     stroke(0);
     drawRect(initialRect);
 
+    // Transformed rect.
     Rect transformedRect = transformClient.getTransformedRect(initialRect);
     fill(255, 0, 0, 150);
     stroke(255, 0, 0);
     drawRect(transformedRect);
   }
 
+  private void drawLine(Coordinate p1, Coordinate p2) {
+    line(p1.x, p1.y, p2.x, p2.y);
+  }
+
   private void drawRect(Rect rect) {
     quad(rect.p1.x, rect.p1.y, rect.p2.x, rect.p2.y, rect.p3.x, rect.p3.y, rect.p4.x, rect.p4.y);
   }
 
-  // TODO fix invalid transformation
   private class TransformClient {
     public Rect getTransformedRect(Rect rect) {
       Coordinate p1 = getTransformedCoordinate(rect.p1);
