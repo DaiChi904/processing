@@ -57,6 +57,7 @@ public class Assignment_1 extends PApplet {
     }
 
     private Coordinate getTransformedCoordinate(Coordinate coordinate) {
+      // This is a hard-coded calculation. See report for theoretical process.
       float x = (91f / 109f) * coordinate.x + (60f / 109f) * coordinate.y;
       float y = (60f / 109f) * coordinate.x - (91f / 109f) * coordinate.y;
 
