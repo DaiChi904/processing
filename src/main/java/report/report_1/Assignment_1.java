@@ -26,8 +26,12 @@ public class Assignment_1 extends PApplet {
     drawLine(supportLine);
 
     // Original rect.
-    Rect initialRect = new Rect(new Coordinate(100, 30), new Coordinate(200, 30), new Coordinate(200, 60),
-        new Coordinate(100, 60));
+    Rect initialRect =
+        new Rect(
+            new Coordinate(100, 30),
+            new Coordinate(200, 30),
+            new Coordinate(200, 60),
+            new Coordinate(100, 60));
     fill(0);
     stroke(0);
     drawRect(initialRect);
