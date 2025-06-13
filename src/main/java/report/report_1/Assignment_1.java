@@ -2,6 +2,7 @@ package report.report_1;
 
 import processing.core.*;
 import report.report_1.model.Coordinate;
+import report.report_1.model.Line;
 import report.report_1.model.Rect;
 
 public class Assignment_1 extends PApplet {
@@ -21,7 +22,8 @@ public class Assignment_1 extends PApplet {
 
   public void draw() {
     // Support line for better visuallity.
-    drawLine(new Coordinate(0, 0), new Coordinate(500f, 500f * 0.3f));
+    Line supportLine = new Line(new Coordinate(0, 0), new Coordinate(500f, 500f * 0.3f));
+    drawLine(supportLine);
 
     // Original rect.
     Rect initialRect = new Rect(new Coordinate(100, 30), new Coordinate(200, 30), new Coordinate(200, 60),
@@ -37,8 +39,8 @@ public class Assignment_1 extends PApplet {
     drawRect(transformedRect);
   }
 
-  private void drawLine(Coordinate p1, Coordinate p2) {
-    line(p1.x, p1.y, p2.x, p2.y);
+  private void drawLine(Line line) {
+    line(line.start.x, line.start.y, line.end.x, line.end.y);
   }
 
   private void drawRect(Rect rect) {
