@@ -41,6 +41,8 @@ public class Assignment_1 extends PApplet {
     fill(255, 0, 0, 150);
     stroke(255, 0, 0);
     drawRect(transformedRect);
+
+    save("./src/main/java/report/report_1/Assignment_1_rendering_image.jpg");
   }
 
   private void drawLine(Line line) {

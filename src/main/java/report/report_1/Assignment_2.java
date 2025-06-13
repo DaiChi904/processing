@@ -8,12 +8,6 @@ public class Assignment_2 extends PApplet {
   int WIDTH = 750;
   int HEIGHT = 750;
 
-  Triangle rootTriangle =
-      new Triangle(
-          new Coordinate((float) WIDTH / 2.0f, 0),
-          new Coordinate(0, (float) HEIGHT),
-          new Coordinate((float) WIDTH, (float) HEIGHT));
-
   public static void main(String args[]) {
     PApplet.main("report.report_1.Assignment_2");
   }
@@ -23,14 +17,23 @@ public class Assignment_2 extends PApplet {
   }
 
   public void setup() {
-    background(255);
-    stroke(0);
+    background(26, 52, 91);
+    stroke(255, 255, 255);
     strokeWeight(1);
+    noFill();
     noLoop();
   }
 
   public void draw() {
+    Triangle rootTriangle =
+        new Triangle(
+            new Coordinate((float) WIDTH / 2.0f, 0),
+            new Coordinate(0, (float) HEIGHT),
+            new Coordinate((float) WIDTH, (float) HEIGHT));
+
     drawFractal(rootTriangle, 7);
+
+    save("./src/main/java/report/report_1/Assignment_2_rendering_image.jpg");
   }
 
   private Coordinate getMiddlePoint(Coordinate p1, Coordinate p2) {
